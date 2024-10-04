@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen ? 'noscroll' : ''">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hugo's Portfolio</title>
+    <meta
+      name="copyright"
+      content="Copyright 1999-2023. Plesk International GmbH. All rights reserved."
+    />
+
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/iht1rxo.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Hugo.<span> Webdesign Student</span></h1>
+
+
+      <div class="menu-wide">
+        <ul>
+          <li>About me</li>
+          <li>Projects</li>
+
+          <button>Collaborate now</button>
+        </ul>
+
+      </div>
+
+      <div class="menu-mobile">
+        <div>         
+            <img src="/img/icone-menu.svg" alt="icone_menu"
+            aria-controls="mainNav"
+            @click="menuIsOpen = !menuIsOpen"/>
+        </div>
+
+        <div 
+        id="mainNav" 
+        x-show="menuIsOpen" 
+        x-transition.duration.200ms
+        class="menu">
+            <div class="header">                
+                <div>
+                    <img src="/img/icone-croix.svg" alt="icone_menu--croix" class="header__menu--croix" aria-controls="mainNav"
+                        @click="menuIsOpen = false" />
+                </div>
+            </div>
+            
+            <img src="/img/forme-menu.png" alt="3d_menu" class="menu__forme" />
+            <nav>
+              <ul>
+                <li>About me</li>
+                <li>Projects</li>
+
+                <button>Collaborate now</button>
+              </ul>
+            </nav>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="welcome">
+        <section id="welcome-text">
+          <h2>WELCOME !</h2>
+        </section>
+        <section id="work-text">
+          <h3>TAKE A LOOK AT MY WORK !</h3>
+        </section>
+      </section>
+
+    
+      <section id="projects">
+        <img src="https://placehold.co/800x400" alt="project1" />
+        <img src="https://placehold.co/400x400" alt="project2" />
+        <img src="https://placehold.co/400x400" alt="project3" />
+        <img src="https://placehold.co/800x400" alt="project4" />
+      </section>
+
+      <section id="contact">
+        <h3><span>LET'S CREATE</span> COOL THINGS <span>TOGETHER</span></h3>
+        <button>hugopetit6996@gmail.com</button>
+        <p>or hit me up on my socials</p>
+        <img src="https://placehold.co/32x32" alt="instagram" />
+        <img src="https://placehold.co/32x32" alt="X-Twitter" />
+        <img src="https://placehold.co/32x32" alt="LinkedIn" />
+      </section>
+
+      <p id="copyright">© Hugo. 2024</p>
+    </main>
+  </body>
+</html>
